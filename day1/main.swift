@@ -72,13 +72,3 @@ for instruction in instructions {
 }
 
 print ("Result: \(result)")
-
-func linesFromFile(_ filename: String) -> [String.SubSequence]? {
-    do {
-        let result = try String.init(contentsOfFile: filename, encoding: .utf8)
-        return result.split(whereSeparator: \.isNewline)
-    } catch {
-        print("Could not read file: \(filename)")
-        return nil
-    }
-}
